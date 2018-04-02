@@ -61,6 +61,9 @@ public class ListaLigada {
     }
 
     public void removeDoComeco() {
+    	/**
+    	 * Atualiza a primeira posicao da lista
+    	 */
     	if(totalDeElementos == 0)
     		throw new IllegalArgumentException("lista vazia");
     	primeira = primeira.getProximo();
@@ -72,13 +75,11 @@ public class ListaLigada {
     	
     }
     public void remove(int posicao) {
-    	if(totalDeElementos == 0)
-    		throw new IllegalArgumentException("lista vazia");
     	Celula anterior = pegaCelula(posicao - 1);
-    	Celula removido = pegaCelula(posicao);
-    	anterior.setProximo(removido.getProximo());
+    	anterior.setProximo(anterior.getProximo().getProximo());
+    	totalDeElementos--;
     }
-
+    
     public int tamanho() { 
     	return totalDeElementos;
     }

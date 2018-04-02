@@ -1,7 +1,10 @@
 package br.com.yurimatheus.estruturadedados.listaligada;
 
 public class Celula {
-	
+	/**
+	 * As celulas de nossa lista
+	 * Elas guardam o elemento e o proximo elemento da lista
+	 */
 	private Object elemento;
 	private Celula proximo;
 
